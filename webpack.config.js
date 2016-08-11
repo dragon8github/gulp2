@@ -1,6 +1,5 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
-
 module.exports = {
        entry:{
         main:'./src/js/main.js',
@@ -26,7 +25,7 @@ module.exports = {
              template:__dirname + '/src/tpl/login.html',
              hash:true,
              inject:"body",
-             chunks:['user']  
+             chunks:['common','user']  
         }),
          //动态将上面编译好的js文件导入到以下html文件中并且生成到指定目录
         new HtmlWebpackPlugin({
@@ -34,14 +33,14 @@ module.exports = {
              template:__dirname + '/src/tpl/index.html',
              hash:true,
              inject:"body",
-             chunks:['index']  
+             chunks:['common','index']  
         }),
         new webpack.ProvidePlugin({
-            $:'jquery'   //全局自动加载jquery
+            //$:'jquery'   //全局自动加载jquery,这只是演示，正常来说像jquery都是在tpl模板中手动引入cdn的
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name:"common",  //对应entry的对象名称
+            chunks:["main","user","index"]
         })
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name:"user",  //对应entry的对象名称
-        //     filename:"user.js"
-        // })
-        ]
-    }
+    ]
+}
