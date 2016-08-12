@@ -1,32 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/bootstrap/2.2.2//css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
 </head>
 <body>
+    <header class="container">
+        <h1>Basic Demo</h1>
+    </header>
+
+    <div class="container">
+        <div class="control-group input-append">
+            <input type="text" name="name" id="name" form="form" 
+            data-required=“true” 
+            data-describedby="name-description" 
+            data-description="name" />
+            <label for="name" class="add-on" id="name-description"><span class="icon-asterisk"></span> Name</label>
+        </div>
+
+        <form id="form">
+            <div class="control-group input-append">
+                <input type="text" name="nickname" id="nickname" data-required="true" />
+
+                <label for="nickname" class="add-on"><span class="icon-asterisk"></span> Nickname</label>
+            </div>
+
+            <div class="control-group input-append">
+                <input type="text" name="site" id="site" />
+
+                <label for="site" class="add-on">Site</label>
+            </div>
+
+            <div class="control-group input-append">
+                <input type="text" name="age" id="age" data-required data-pattern="^[0-9]+$" />
+
+                <label for="age" class="add-on"><span class="icon-asterisk"></span> Age</label>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" class="btn btn-primary">Send</button>
+
+                <button type="reset" class="btn">Reset</button>
+            </div>
+        </form>
+    </div>
 
 
-<h2>用户登录</h2>
-<div>
-    用户名
-</div>
-<div>
-    <input type="text" id="txtUserLogin"/>
-</div>
+    <script>
+        $(function()
+        {
+            $('form').validate({
+                onKeyup : true,
+                eachValidField : function() {
 
-<div>
-    密码
-</div>
-<div>
-    <input type="password" id="txtUserPwd"/>
-</div>
-<div>
-    <button id="cmdLogin" class="redBtn" >登录</button>
+                    $(this).closest('div').removeClass('error').addClass('success');
+                },
+                eachInvalidField : function() {
 
-    <button id="cmdRegin"  class="greenBtn">注册</button>
-</div>
+                    $(this).closest('div').removeClass('success').addClass('error');
+                },
+                description : {
+                    name : {
+                        required : '<span class="icon-asterisk"></span> required',
+                        pattern : '<span class="icon-asterisk"></span> pattern',
+                        conditional : '<span class="icon-asterisk"></span> conditional',
+                        valid : '<span class="icon-asterisk"></span> valid'
+                    }
+                }
+            });
+        })
 
-<script type="text/javascript" src="../js/common.js?38b9c35e02f5c78013e1"></script><script type="text/javascript" src="../js/user.js?38b9c35e02f5c78013e1"></script></body>
+    </script>
+
+<script type="text/javascript" src="../js/common.js?7ddea710035efd710de2"></script><script type="text/javascript" src="../js/jqueryplugin.js?7ddea710035efd710de2"></script><script type="text/javascript" src="../js/user.js?7ddea710035efd710de2"></script></body>
 </html>

@@ -1,8 +1,8 @@
-webpackJsonp([1,3],[
+webpackJsonp([2,4],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(6);
+	__webpack_require__(7);
 
 	alert('我是main.js');
 
@@ -318,13 +318,14 @@ webpackJsonp([1,3],[
 
 
 /***/ },
-/* 6 */
+/* 6 */,
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(7);
+	var content = __webpack_require__(8);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -344,7 +345,7 @@ webpackJsonp([1,3],[
 	}
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();

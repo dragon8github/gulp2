@@ -4,7 +4,8 @@ module.exports = {
        entry:{
         main:'./src/js/main.js',
         user:['./src/js/login.js','./src/js/regin.js'],
-        index:['./src/js/index.js']
+        index:['./src/js/index.js'],
+        jqueryplugin:['./src/lib/jquery-validate.js']
     },
     output: {
         path: __dirname + '/build/js',  //输出文件夹
@@ -25,7 +26,7 @@ module.exports = {
              template:__dirname + '/src/tpl/login.html',
              hash:true,
              inject:"body",
-             chunks:['common','user']  
+             chunks:['common','user','jqueryplugin']  
         }),
          //动态将上面编译好的js文件导入到以下html文件中并且生成到指定目录
         new HtmlWebpackPlugin({
