@@ -61,6 +61,8 @@
 
                     $(this).closest('div').removeClass('success').addClass('error');
                 },
+                //注意这里，配合input的data-describedby="name-description" 和 data-description="name"
+                //再加上一个id为name-description的容器，下面的html内容会append进里面
                 description : {
                     name : {
                         required : '<span class="icon-asterisk"></span> required',
@@ -74,5 +76,5 @@
 
     </script>
 
-<script type="text/javascript" src="../js/common.js?7ddea710035efd710de2"></script><script type="text/javascript" src="../js/jqueryplugin.js?7ddea710035efd710de2"></script><script type="text/javascript" src="../js/user.js?7ddea710035efd710de2"></script></body>
+<script type="text/javascript" src="../js/common.js?cb362e2f2fbcf6e6ad59"></script><script type="text/javascript" src="../js/jqueryplugin.js?cb362e2f2fbcf6e6ad59"></script><script type="text/javascript" src="../js/user.js?cb362e2f2fbcf6e6ad59"></script></body>
 </html>
