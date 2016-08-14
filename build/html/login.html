@@ -53,12 +53,12 @@
         {
             $('form').validate({
                 onKeyup : true,
+                //监听对象的验证成功事件
                 eachValidField : function() {
-
-                    $(this).closest('div').removeClass('error').addClass('success');
+                    $(this).closest('div').removeClass('error').addClass('success');  
                 },
+                //监听对象的验证失败事件
                 eachInvalidField : function() {
-
                     $(this).closest('div').removeClass('success').addClass('error');
                 },
                 //注意这里，配合input的data-describedby="name-description" 和 data-description="name"
@@ -76,5 +76,5 @@
 
     </script>
 
-<script type="text/javascript" src="../js/common.js?cb362e2f2fbcf6e6ad59"></script><script type="text/javascript" src="../js/jqueryplugin.js?cb362e2f2fbcf6e6ad59"></script><script type="text/javascript" src="../js/user.js?cb362e2f2fbcf6e6ad59"></script></body>
+<script type="text/javascript" src="../js/common.js?5daefb1ebec931cd3d8b"></script><script type="text/javascript" src="../js/jqueryplugin.js?5daefb1ebec931cd3d8b"></script><script type="text/javascript" src="../js/user.js?5daefb1ebec931cd3d8b"></script></body>
 </html>

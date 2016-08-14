@@ -1,16 +1,15 @@
-webpackJsonp([3,4],[
-/* 0 */
+webpackJsonp([3,4],{
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(4);
-	module.exports = __webpack_require__(5);
+	__webpack_require__(8);
+	module.exports = __webpack_require__(9);
 
 
 /***/ },
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */
+
+/***/ 8:
 /***/ function(module, exports) {
 
 	
@@ -20,7 +19,8 @@ webpackJsonp([3,4],[
 	});
 
 /***/ },
-/* 5 */
+
+/***/ 9:
 /***/ function(module, exports) {
 
 	$("#cmdRegin").click(function(event) {
@@ -29,4 +29,5 @@ webpackJsonp([3,4],[
 	});
 
 /***/ }
-]);
+
+});
