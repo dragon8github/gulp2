@@ -7,7 +7,7 @@ module.exports = {
         // index:['./src/js/index.js'],
         // jqueryplugin:['./src/lib/jquery-validate.js']
     },
-output: {
+    output: {
         path: __dirname + '/build/js',  //输出文件夹
         filename:'[name].js'   //最终打包生成的文件名,但如果写为‘[name].js’ 表示将entry各自生成不合并
     },
@@ -16,8 +16,13 @@ output: {
         {
             test: /\.css$/,
             loaders: ['style', 'css']
-        }　
-        ]
+        },{
+            test: /\.js|jsx$/,   //是一个正则，代表js或者jsx后缀的文件要使用
+                loader: 'babel',
+                query:{
+                    presets:['es2015','react','stage-0'] //必须先安装babel-preset-es2015和babel-preset-react
+                }
+        }]
     },
     plugins:[
         //动态将上面编译好的js文件导入到以下html文件中并且生成到指定目录
