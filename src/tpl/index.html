@@ -7,7 +7,21 @@
 </head>
 <body>
 	<%= require('raw!./header.inc') %>
+	
+	<div id="hot">
+		今日头条：
+	<% var json = JSON.parse(require('raw!./../remote/hot.json').replace(/"use strict";/,"").replace(/;/,"").trim()) %>
+	<% json.forEach(function(item){ %>
+	 <a href="<%= item.href %>"><%= item.text %></a>
+	<% }) %>
+	
 
+	
+			
+		
+			
+		
+	</div>
 	<h1>我是主页</h1>
 </body>
 </html>

@@ -1,33 +1,35 @@
-webpackJsonp([3,4],{
-
-/***/ 0:
+webpackJsonp([3,4],[
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(8);
-	module.exports = __webpack_require__(9);
+	__webpack_require__(4);
+	module.exports = __webpack_require__(5);
 
 
 /***/ },
-
-/***/ 8:
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */
 /***/ function(module, exports) {
 
-	
-	$("#cmdLogin").click(function(event) {
+	"use strict";
+
+	$("#cmdLogin").click(function (event) {
 		/* Act on the event */
-		 alert('登录');
+		alert('登录');
 	});
 
 /***/ },
-
-/***/ 9:
+/* 5 */
 /***/ function(module, exports) {
 
-	$("#cmdRegin").click(function(event) {
+	"use strict";
+
+	$("#cmdRegin").click(function (event) {
 		/* Act on the event */
-		 alert('注册');
+		alert('注册');
 	});
 
 /***/ }
-
-});
+]);
