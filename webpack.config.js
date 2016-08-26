@@ -23,7 +23,8 @@ module.exports = {
               query: {
                   //必须先安装babel-preset-es2015和babel-preset-react
                   presets: ['es2015', 'react', 'stage-0']
-              }
+              },
+              query:{compact:true} //自动去掉多余的空格
            }
         ]
     },

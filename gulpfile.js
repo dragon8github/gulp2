@@ -4,14 +4,6 @@ var gulp_uglify = require('gulp-uglify');
 var webpack = require('webpack');
 var webpack_config = require('./webpack.config.js');
 
-/*
-gp.task('build-js',function()
-{
-	gulp_webpack(webpack_config,webpack)
-	.pipe(gp.dest('./build/js'))
-})
-*/
-
 //动态配置entry属性
 gp.task('config',function(){
 	var fs = require('fs');
