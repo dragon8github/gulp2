@@ -43,3 +43,11 @@ gp.task('run',['config'],function()
 	/* gp.src(['./src/tpl/*.html'])
 	.pipe(gp.dest('./build/html')); */
 })
+
+
+var sass = require('gulp-sass');
+gp.task('sass',function(){
+	gp.src("./src/css/index.scss")
+	.pipe(sass())
+	.pipe(gp.dest('./build/css'))
+})
